@@ -1,0 +1,616 @@
+// .footer {
+//   background: radial-gradient(1200px 600px at 30% 0%, #3b0a6a, #1b002f);
+//   color: #fff;
+//   padding: 80px 0 50px;
+
+//   &__container {
+//     max-width: 1200px;
+//     margin: 0 auto;
+//     padding: 0 24px;
+//   }
+
+//   &__top {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     margin-bottom: 80px;
+
+//     h2 {
+//       font-size: 40px;
+//       font-weight: 700;
+//     }
+//   }
+
+//   &__actions {
+//     display: flex;
+//     gap: 16px;
+//   }
+
+//   &__main {
+//     display: grid;
+//     grid-template-columns: 1.2fr 2.8fr;
+//     gap: 80px;
+//   }
+
+//   &__subscribe {
+//     h4 {
+//       margin-bottom: 16px;
+//     }
+
+//     input {
+//       width: 100%;
+//       padding: 14px 16px;
+//       border-radius: 12px;
+//       border: none;
+//       margin-bottom: 12px;
+//     }
+
+//     &-btn {
+//       display: inline-block;
+//       margin-top: 12px;
+//       font-weight: 600;
+//     }
+//   }
+
+//   &__note {
+//     font-size: 13px;
+//     opacity: 0.8;
+
+//     a {
+//       color: #fff;
+//       text-decoration: underline;
+//     }
+//   }
+
+//   &__cols {
+//     display: grid;
+//     grid-template-columns: repeat(4, 1fr);
+//     gap: 40px;
+//   }
+
+//   &__col {
+//     h5 {
+//       margin-bottom: 16px;
+//       font-size: 15px;
+//       opacity: 0.7;
+//     }
+
+//     a {
+//       display: block;
+//       margin-bottom: 10px;
+//       font-size: 14px;
+//       opacity: 0.9;
+//       cursor: pointer;
+
+//       &:hover {
+//         opacity: 1;
+//       }
+//     }
+//   }
+
+//   &__bottom {
+//     margin-top: 60px;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     opacity: 0.9;
+//   }
+
+//   &__socials {
+//     display: flex;
+//     gap: 18px;
+
+//     svg {
+//       width: 22px;
+//       height: 22px;
+//       fill: #fff;
+//       opacity: 0.9;
+//       cursor: pointer;
+
+//       &:hover {
+//         opacity: 1;
+//       }
+//     }
+//   }
+// }
+
+// .btn {
+//   padding: 12px 20px;
+//   border-radius: 14px;
+//   font-weight: 600;
+
+//   &--ghost {
+//     border: 1px solid rgba(255,255,255,.4);
+//   }
+
+//   &--primary {
+//     background: linear-gradient(135deg, #8f2bff, #d92cff);
+//   }
+// }
+// .footer {
+//   position: relative;
+
+//   &__rating {
+//     position: absolute;
+//     right: 24px;
+//     bottom: 32px;
+
+//     img {
+//       height: 70px;
+//       width: auto;
+//       display: block;
+//     }
+//   }
+// }
+.footer {
+  background: radial-gradient(1200px 600px at 30% 0%, #2a004d, #110022);
+  color: #fff;
+  padding: 100px 0 60px;
+  position: relative;
+  overflow: hidden;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* TOP CTA SECTION */
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+
+    h2 {
+      font-size: 42px;
+      font-weight: 700;
+      letter-spacing: -1.5px; /* Tighter heading like reference */
+      max-width: 600px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: 16px;
+  }
+
+  /* MAIN GRID: 1 column for Subscribe, 1 column for the Links Grid */
+  &__main {
+    display: grid;
+    grid-template-columns: 320px 1fr; /* Fixed width for left side */
+    gap: 100px; /* Big gap between subscribe and links */
+    margin-bottom: 80px;
+  }
+
+  /* LEFT SIDE: SUBSCRIBE */
+  &__subscribe {
+    h4 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid #ff4bd8;
+      background: #fff;
+      color: #000;
+      font-size: 15px;
+      margin-bottom: 12px;
+      
+    }
+
+    .footer__note {
+      font-size: 13px;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 16px;
+
+      a {
+        color: inherit;
+        text-decoration: underline;
+      }
+    }
+
+    &-btn {
+      display: inline-block;
+      font-size: 15px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  /* RIGHT SIDE: 4 COLUMNS */
+  &__cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* FORCES 4 columns */
+    gap: 40px;
+  }
+
+  &__col {
+    h5 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      color: #fff;
+    }
+
+    a {
+      display: block;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      margin-bottom: 12px;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  /* BOTTOM BAR */
+  &__bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 20px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  /* GLASSDOOR RATING */
+  &__rating {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+
+    img {
+      height: 85px;
+      width: auto;
+      display: block;
+    }
+  }
+}
+/* ===== FIXED FOOTER BOTTOM LAYOUT ===== */
+
+.footer {
+  // ... keep your existing background and top/main code
+
+  &__bottom {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    
+    /* This makes Copyright, Socials, and Rating sit in one row */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    position: relative;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 24px;
+    /* This centers the icons regardless of the text on the left */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  /* Fixed Glassdoor Positioning */
+  &__rating {
+    /* Remove the absolute positioning from previous version */
+    position: static; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    img {
+      height: 60px; /* Adjusted to match the scale in your photo */
+      width: auto;
+      display: block;
+    }
+  }
+}
+
+/* Fix for the Copyright text */
+.footer__bottom p {
+  font-size: 17px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 60px;
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between; // Text on left, Everything else on right
+  align-items: center;
+
+  p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+/* This container keeps Icons and Rating in a single ROW */
+.footer__right-group {
+  display: flex;
+  align-items: center;
+  gap: 30px; // Spacing between social icons and the Glassdoor logo
+}
+
+.footer__socials {
+  display: flex;
+  gap: 18px;
+
+  svg {
+    width: 27px;
+    height: 27px;
+    fill: #ffffff; // Makes your SVG icons white
+    opacity: 0.8;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.footer__rating {
+  img {
+    height: 70px;
+    width: auto;
+    display: block;
+    
+    filter: brightness(0) invert(1);
+  
+  }
+}
+@media (max-width: 1024px) {
+  .footer__main {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  
+  .footer__cols {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 768px) {
+
+  .footer {
+    padding: 60px 0 40px;
+  }
+
+  .footer__main {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .footer__subscribe {
+    width: 100%;
+  }
+
+  .footer__subscribe input {
+    border-radius: 14px;
+    padding: 18px;
+    font-size: 16px;
+  }
+
+  .footer__cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 30px;
+  }
+
+  .footer__col h5 {
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+
+  .footer__col a {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .footer__bottom p {
+    font-size: 13px;
+  }
+
+  .footer__right-group {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer__socials {
+    justify-content: center;
+    gap: 22px;
+  }
+
+  .footer__socials svg {
+    width: 24px;
+    height: 24px;
+  }
+  .footer__rating {
+    align-items: center;
+  }
+
+  .footer__rating img {
+    height: 55px;
+    filter: brightness(0) invert(1);
+  }
+
+}
+@media (max-width: 768px) {
+  .footer__top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .footer__actions {
+    flex-direction: column; 
+    width: 100%;
+  }
+
+  .footer__actions a {
+    width: 100%;          
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+
+  .footer__bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .footer__right-group {
+    flex-direction: column;  
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer__socials {
+    flex-direction: row;    
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .footer__rating {
+    margin-top: 40px;
+  }
+
+  .footer__rating img {
+    height: 60px;
+  }
+}
+/* =========================
+   TABLET (≤1024px)
+========================= */
+@media (max-width: 1024px) {
+
+  .footer {
+    padding: 80px 0 50px;
+  }
+
+  /* ===== TOP CTA ===== */
+  .footer__top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  .footer__top h2 {
+    font-size: 34px;
+    max-width: 650px;
+  }
+
+  .footer__actions {
+    justify-content: center;
+  }
+
+  /* ===== MAIN SECTION ===== */
+  .footer__main {
+    grid-template-columns: 1fr;  /* stack subscribe + links */
+    gap: 60px;
+  }
+
+  /* Subscribe full width */
+  .footer__subscribe {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* Links in 2 columns */
+  .footer__cols {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 60px;
+  }
+
+  /* ===== BOTTOM SECTION ===== */
+  .footer__bottom {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    margin-top: 60px;
+  }
+
+  .footer__right-group {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .footer__socials {
+    position: static;
+    transform: none;
+    justify-content: center;
+  }
+
+  .footer__rating {
+    align-items: center;
+  }
+
+  .footer__rating img {
+    height: 65px;
+  }
+}
+

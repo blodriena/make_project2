@@ -1,0 +1,182 @@
+/* 1. THE MAIN SECTION */
+.apps-section {
+  padding: 10px 0 80px;
+  text-align: center;
+  background: #ffffff;
+  font-family: 'Inter', sans-serif; /* Use a clean sans-serif like Make */
+}
+
+/* 2. THE HEADER TEXT */
+.apps__header {
+  margin-bottom: 60px;
+  padding: 0 20px;
+
+  .apps__eyebrow {
+    display: block;
+    color: #d600ff;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 16px;
+  }
+
+  .apps__title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #2a004d;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .apps__subtitle {
+    color: #6a4a8a;
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+}
+
+/* 3. THE SCROLLING CONTAINER */
+/* 1. THE CONTAINER (Locked to 1200px) */
+.apps-container {
+  overflow: hidden;
+  position: relative;
+  max-width: 1100px; /* Forces it to stay inside 1200px */
+  margin: 0 auto;    /* Centers the 1200px box */
+  padding: 20px 0;
+  
+  /* Mask ensures icons fade at the 1200px edges */
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.apps__track {
+  display: flex;
+  gap: 50px; 
+  width: max-content;
+  animation: scroll 40s linear infinite;
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+
+/* 2. THE APP CARD */
+.app {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  background: #fcfbfd; /* Main card is white */
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  flex-shrink: 0;
+  border: 1px solid #f0f0f0;
+  z-index: 1;
+  cursor: pointer;
+
+  /* This creates the colored box INSIDE without changing HTML */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: -1; /* Puts it behind the icon */
+  }
+
+  img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    margin-bottom: 25px; /* Pushes text down */
+    filter: none !important; /* Keep colors sharp */
+  }
+
+  p {
+    font-size: 12px;
+    font-weight: 700;
+    color: #2a004d;
+    margin: 0;
+  }
+}
+
+
+/* DeepSeek */
+.app:nth-child(9n + 1)::before {
+  background-color: #1f4cff;
+}
+
+/* Perplexity */
+.app:nth-child(9n + 2)::before {
+  background-color: #0f766e;
+}
+
+/* Canva */
+.app:nth-child(9n + 3)::before {
+  background-color: #7b3ff2;
+}
+
+/* Slack */
+.app:nth-child(9n + 4)::before {
+  background-color: #4a154b;
+}
+
+/* Salesforce */
+.app:nth-child(9n + 5)::before {
+  background-color: #00a1e0;
+}
+
+/* NetSuite */
+.app:nth-child(9n + 6)::before {
+  background-color: #1f2937;
+}
+
+/* Monday */
+.app:nth-child(9n + 7)::before {
+  background-color: #ff3d57;
+}
+
+/* HubSpot */
+.app:nth-child(9n + 8)::before {
+  background-color: #ff7a59;
+}
+
+/* OpenAI */
+.app:nth-child(9n + 9)::before {
+  background-color: #10a37f;
+}
+
+
+/* 6. ANIMATION & CTA */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.apps__cta {
+  margin-top: 50px;
+
+  .btn--browse {
+    display: inline-block;
+    padding: 16px 40px;
+    background: linear-gradient(90deg, #834dff 0%, #ff2bd6 100%);
+    color: #ffffff;
+    font-weight: 700;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(214, 0, 255, 0.25);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+      box-shadow: 0 12px 30px rgba(214, 0, 255, 0.35);
+    }
+  }
+}

@@ -1,0 +1,24 @@
+// Colors
+$deep-purple: #1e0034;
+$deep-purple-2: #2a004d;
+$deep-purple-3: #3b006a;
+
+$purple: #2b004f;
+$purple-soft: #6b4a8f;
+
+$vibrant-pink: #ff0080;
+$hover-bg: rgba(122, 0, 255, 0.06);
+
+$white: #ffffff;
+
+// Gradients
+$header-gradient: linear-gradient(
+  90deg,
+  $deep-purple-2 0%,
+  $deep-purple-3 100%
+);
+
+// Shadows
+$shadow-soft: 0 20px 40px rgba(0, 0, 0, 0.18);
+$shadow-strong: 0 30px 80px rgba(0, 0, 0, 0.25);
+

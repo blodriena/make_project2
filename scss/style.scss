@@ -1,0 +1,63 @@
+@use "variables";
+@use "nav";
+@use "hero";
+@use "features";
+@use "solutions";
+@use "apps";
+@use "success";
+@use "ai";
+@use "enterprise";
+@use "security";
+@use "ratings";
+@use "footer";
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif; // Make uses a clean sans-serif
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 10px; 
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a0033; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #834dff 0%, #ff2bd6 100%);
+  
+  border: 3px solid #1a0033; 
+  border-radius: 100px;
+  
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: linear-gradient(180deg, #9d71ff 0%, #ff5cd0 100%);
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+
+  &:active {
+    background: #ff2bd6;
+  }
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #834dff #1a0033;
+}
+

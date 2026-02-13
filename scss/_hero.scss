@@ -1,0 +1,295 @@
+.hero {
+  background: #220041; // main purple
+  padding: 80px 0;
+  overflow: hidden;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+  }
+
+  // LEFT SIDE
+  &__content {
+    flex: 1;
+    color: #fff;
+    z-index: 2;
+  }
+
+  &__title {
+    font-size: 47px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    font-size: 18px;
+    opacity: .85;
+    margin-bottom: 28px;
+    max-width: 520px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__notes {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    opacity: .9;
+  }
+  span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    
+    /* Using a CSS checkmark if you don't have an icon */
+    &::before {
+      content: '✓';
+      color: #00ffaa; /* Green checkmark */
+      font-weight: bold;
+    }
+  }
+
+ .hero__media {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hero__video {
+  width: 520px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 18px;
+  background: transparent;
+  /* Add this line to remove black background */
+  mix-blend-mode: screen; 
+  /* Ensures Chrome doesn't clip the effect */
+  isolation: isolate; 
+}
+
+}
+
+.btn {
+  padding: 14px 28px; 
+  border-radius: 10px;
+  font-weight: 700; 
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .25s ease;
+  cursor: pointer;
+  border: none; 
+}
+
+.btn--primary {
+ 
+  background: linear-gradient(135deg, #f900c3 0%, #8e2de2 100%);
+  color: #fff !important;
+  font-weight: 700;
+  
+  box-shadow: 0 4px 15px rgba(249, 0, 195, 0.4);
+  
+  &:hover {
+    transform: translateY(-2px);
+ 
+    box-shadow: 0 8px 25px rgba(249, 0, 195, 0.5);
+    filter: brightness(1.1);
+  }
+}
+
+.btn--ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff !important;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+    transform: translateY(-2px);
+  }
+}
+
+.hero__brands {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 65px;           /* Large spacing between logos */
+  margin-top: 5px;   /* Pushes brands to the very bottom */
+  padding-bottom: 10px;
+  
+  img {
+    height: 56px;      /* Standard height for brand logos */
+    width: auto;
+    opacity: 0.5;      /* Makes them look muted/greyish white */
+    filter: brightness(0) invert(1); /* Forces any logo to be pure white */
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 1;     
+    }
+  }
+}
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 40px 0 30px;
+  }
+
+  .hero__container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero__media {
+    order: -1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero__video {
+    width: 90%;
+    max-width: 360px;
+    height: auto;
+    border-radius: 18px;
+  }
+
+  .hero__title {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .hero__desc {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .hero__buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 14px;
+  }
+
+  .hero__buttons .btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+  }
+
+  .hero__notes {
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+  }
+}
+.hero__brands {
+  overflow: hidden;
+  position: relative;
+  margin-top: 30px;
+}
+
+.hero__brands-track {
+  display: flex;
+  gap: 60px;
+  width: max-content;
+  animation: scrollBrands 18s linear infinite;
+}
+
+.hero__brands-track img {
+  height: 32px;
+  width: auto;
+  opacity: 0.6;
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 768px) {
+
+  .hero__brands {
+    overflow: hidden;
+  }
+
+  .hero__brands-track {
+    width: max-content;
+    animation: scroll 25s linear infinite;
+  }
+
+  .hero__brands img {
+    height: 36px;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+}
+
+/* TABLET ONLY */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .hero {
+    padding: 80px 0 60px;
+    text-align: center;
+  }
+
+  .hero__container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  /* VIDEO ON TOP */
+  .hero__media {
+    order: -1;
+    justify-content: center;
+  }
+
+  .hero__video {
+    width: 420px;
+    height: auto;
+  }
+
+  /* CONTENT CENTERED */
+  .hero__content {
+    max-width: 680px;
+  }
+
+  .hero__title {
+    font-size: 36px;
+    line-height: 1.25;
+  }
+
+  .hero__desc {
+    font-size: 17px;
+    margin: 0 auto 24px;
+  }
+
+  .hero__buttons {
+    justify-content: center;
+  }
+
+  .hero__notes {
+    justify-content: center;
+  }
+
+}

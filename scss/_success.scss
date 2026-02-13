@@ -1,0 +1,208 @@
+.success {
+  position: relative;
+  padding: 120px 0 100px;
+  background: linear-gradient(
+    180deg,
+    #2a004d 0%,
+    #1b0033 55%,
+    #12001f 100%
+  );
+}
+
+.success__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.success__eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #c084fc;
+}
+
+.success__title {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.success__subtitle {
+  max-width: 760px;
+  margin: 0 auto 72px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.success__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 64px;
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+  border-radius: 28px; /* more rounded like photo */
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.08) 0%,
+    rgba(255,255,255,0.02) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  height: 100%;
+}
+
+.story:hover {
+  transform: translateY(-10px);
+  border-color: rgba(178, 0, 255, 0.8);
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.6),
+    inset 0 0 0 1px rgba(178, 0, 255, 0.25);
+}
+
+
+.story__media {
+  height: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* The glow background */
+  background: radial-gradient(circle at center, #3d007a 0%, #1a0030 100%);
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    z-index: 2;
+  }
+
+  /* The Purple AI Tag */
+  .ai-badge {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: #834dff;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    z-index: 3;
+  }
+}
+
+.story__content {
+  padding: 32px 24px; /* More padding for a premium look */
+  text-align: left;
+
+  .story__meta {
+    display: flex;
+    gap: 16px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 16px;
+    font-weight: 500;
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+  }
+
+  h3 {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #ffffff;
+    margin: 0;
+  }
+}
+
+/* THE BUTTON: Rectangular with rounded corners */
+.success__cta {
+  display: inline-block;
+  background: linear-gradient(90deg, #834dff 0%, #ff2bd6 100%);
+  color: #ffffff;
+  padding: 15px 30px;
+  border-radius: 12px; /* Fixed radius as per photo */
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+
+  &:hover {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(214, 0, 255, 0.4);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1024px) {
+  .success__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .story__media {
+    height: 160px;
+  }
+}
+/* TABLET ONLY */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .success-card {
+    background: #2a0a4a;   /* dark outer wrapper */
+    padding: 16px;
+    border-radius: 24px;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+  }
+
+  .success-card__media {
+    border-radius: 20px;
+    padding: 70px 20px;
+  }
+
+  .success-card__content {
+    padding: 24px;
+  }
+
+  .success-card + .success-card {
+    margin-top: 32px; /* spacing between cards */
+  }
+
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .profile {
+    width: 140px;
+    height: 140px;
+  }
+
+  .brand-left,
+  .brand-right {
+    width: 90px;
+    height: 90px;
+  }
+
+}
