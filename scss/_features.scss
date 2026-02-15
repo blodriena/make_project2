@@ -182,7 +182,6 @@
     line-height: 1.6;
   }
 }
-/* TABLET ONLY */
 @media (min-width: 769px) and (max-width: 1024px) {
 
   .features__grid {
@@ -191,8 +190,6 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding-bottom: 10px;
-
-    /* hide scrollbar (optional clean look) */
     scrollbar-width: none;
   }
 
@@ -201,7 +198,7 @@
   }
 
   .feature-card {
-    flex: 0 0 48%; /* 2 cards visible */
+    flex: 0 0 48%; 
     scroll-snap-align: start;
   }
 

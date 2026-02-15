@@ -182,7 +182,7 @@
   }
 
   .solutions-panel__container {
-    grid-template-columns: 1fr;   /* stack */
+    grid-template-columns: 1fr; 
     gap: 32px;
   }
 
@@ -231,9 +231,6 @@
   }
 
 }
-/* =========================
-   TABLET (769px – 1024px)
-========================= */
 @media (max-width: 1024px) and (min-width: 769px) {
 
   .solutions {
@@ -256,7 +253,7 @@
   }
 
   .solutions-panel__container {
-    grid-template-columns: 1fr 1fr; /* balanced columns */
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
 
@@ -280,10 +277,6 @@
     font-size: 15px;
   }
 }
-/* =========================
-   TABLET (≤1024px)
-   Horizontal Scroll Tabs
-========================= */
 @media (max-width: 1024px) and (min-width: 769px) {
 
   .solutions__tabs {
@@ -293,8 +286,6 @@
     gap: 8px;
     padding: 8px 12px;
     scroll-behavior: smooth;
-
-    /* hide scrollbar */
     scrollbar-width: none; 
   }
 
@@ -303,12 +294,10 @@
   }
 
   .solutions__tab {
-    flex: 0 0 auto;  /* IMPORTANT */
+    flex: 0 0 auto; 
     padding: 10px 32px;
     font-size: 14px;
   }
-
-  /* hide dropdown on tablet */
   .solutions__select {
     display: none;
   }
@@ -317,46 +306,42 @@
 
   .solutions__tabs {
     display: flex;
-    flex-wrap: nowrap;        /* 🚀 prevents second line */
+    flex-wrap: nowrap;       
     justify-content: center;
     gap: 10px;
   }
 
   .solutions__tab {
-    padding: 10px 22px;       /* slightly tighter */
+    padding: 10px 22px;       
     font-size: 14px;
-    white-space: nowrap;      /* prevents text break */
+    white-space: nowrap;     
   }
 
   .solutions__select {
     display: none;
   }
 }
-/* =========================
-   TABLET (769px – 1024px)
-   Scrollable Tabs Row
-========================= */
 @media (min-width: 769px) and (max-width: 1024px) {
 
   .solutions__tabs {
     display: flex;
-    flex-wrap: nowrap;          /* no wrapping */
+    flex-wrap: nowrap;         
     gap: 12px;
 
-    overflow-x: auto;           /* 🔥 enable scroll */
+    overflow-x: auto;           
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
 
-    scrollbar-width: none;      /* hide scrollbar (Firefox) */
+    scrollbar-width: none;    
   }
 
   .solutions__tabs::-webkit-scrollbar {
-    display: none;              /* hide scrollbar (Chrome) */
+    display: none;             
   }
 
   .solutions__tab {
-    flex: 0 0 auto;             /* prevent shrinking */
-    white-space: nowrap;        /* prevent text break */
+    flex: 0 0 auto;             
+    white-space: nowrap;        
     padding: 10px 24px;
   }
 

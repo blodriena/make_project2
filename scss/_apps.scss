@@ -1,12 +1,11 @@
-/* 1. THE MAIN SECTION */
+
 .apps-section {
   padding: 10px 0 80px;
   text-align: center;
   background: #ffffff;
-  font-family: 'Inter', sans-serif; /* Use a clean sans-serif like Make */
+  font-family: 'Inter', sans-serif;
 }
 
-/* 2. THE HEADER TEXT */
 .apps__header {
   margin-bottom: 60px;
   padding: 0 20px;
@@ -37,17 +36,13 @@
     line-height: 1.6;
   }
 }
-
-/* 3. THE SCROLLING CONTAINER */
-/* 1. THE CONTAINER (Locked to 1200px) */
 .apps-container {
   overflow: hidden;
   position: relative;
-  max-width: 1100px; /* Forces it to stay inside 1200px */
-  margin: 0 auto;    /* Centers the 1200px box */
+  max-width: 1100px; 
+  margin: 0 auto;    
   padding: 20px 0;
-  
-  /* Mask ensures icons fade at the 1200px edges */
+ 
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
@@ -62,13 +57,11 @@
   }
 }
 
-
-/* 2. THE APP CARD */
 .app {
   position: relative;
   width: 110px;
   height: 110px;
-  background: #fcfbfd; /* Main card is white */
+  background: #fcfbfd; 
   border-radius: 24px;
   display: flex;
   flex-direction: column;
@@ -79,7 +72,6 @@
   z-index: 1;
   cursor: pointer;
 
-  /* This creates the colored box INSIDE without changing HTML */
   &::before {
     content: '';
     position: absolute;
@@ -87,15 +79,15 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    z-index: -1; /* Puts it behind the icon */
+    z-index: -1; 
   }
 
   img {
     width: 30px;
     height: 30px;
     object-fit: contain;
-    margin-bottom: 25px; /* Pushes text down */
-    filter: none !important; /* Keep colors sharp */
+    margin-bottom: 25px; 
+    filter: none !important;
   }
 
   p {
@@ -107,53 +99,41 @@
 }
 
 
-/* DeepSeek */
 .app:nth-child(9n + 1)::before {
   background-color: #1f4cff;
 }
 
-/* Perplexity */
 .app:nth-child(9n + 2)::before {
   background-color: #0f766e;
 }
 
-/* Canva */
 .app:nth-child(9n + 3)::before {
   background-color: #7b3ff2;
 }
 
-/* Slack */
 .app:nth-child(9n + 4)::before {
   background-color: #4a154b;
 }
 
-/* Salesforce */
 .app:nth-child(9n + 5)::before {
   background-color: #00a1e0;
 }
 
-/* NetSuite */
 .app:nth-child(9n + 6)::before {
   background-color: #1f2937;
 }
 
-/* Monday */
 .app:nth-child(9n + 7)::before {
   background-color: #ff3d57;
 }
 
-/* HubSpot */
 .app:nth-child(9n + 8)::before {
   background-color: #ff7a59;
 }
-
-/* OpenAI */
 .app:nth-child(9n + 9)::before {
   background-color: #10a37f;
 }
 
-
-/* 6. ANIMATION & CTA */
 @keyframes scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }

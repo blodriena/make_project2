@@ -1,147 +1,3 @@
-// .footer {
-//   background: radial-gradient(1200px 600px at 30% 0%, #3b0a6a, #1b002f);
-//   color: #fff;
-//   padding: 80px 0 50px;
-
-//   &__container {
-//     max-width: 1200px;
-//     margin: 0 auto;
-//     padding: 0 24px;
-//   }
-
-//   &__top {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     margin-bottom: 80px;
-
-//     h2 {
-//       font-size: 40px;
-//       font-weight: 700;
-//     }
-//   }
-
-//   &__actions {
-//     display: flex;
-//     gap: 16px;
-//   }
-
-//   &__main {
-//     display: grid;
-//     grid-template-columns: 1.2fr 2.8fr;
-//     gap: 80px;
-//   }
-
-//   &__subscribe {
-//     h4 {
-//       margin-bottom: 16px;
-//     }
-
-//     input {
-//       width: 100%;
-//       padding: 14px 16px;
-//       border-radius: 12px;
-//       border: none;
-//       margin-bottom: 12px;
-//     }
-
-//     &-btn {
-//       display: inline-block;
-//       margin-top: 12px;
-//       font-weight: 600;
-//     }
-//   }
-
-//   &__note {
-//     font-size: 13px;
-//     opacity: 0.8;
-
-//     a {
-//       color: #fff;
-//       text-decoration: underline;
-//     }
-//   }
-
-//   &__cols {
-//     display: grid;
-//     grid-template-columns: repeat(4, 1fr);
-//     gap: 40px;
-//   }
-
-//   &__col {
-//     h5 {
-//       margin-bottom: 16px;
-//       font-size: 15px;
-//       opacity: 0.7;
-//     }
-
-//     a {
-//       display: block;
-//       margin-bottom: 10px;
-//       font-size: 14px;
-//       opacity: 0.9;
-//       cursor: pointer;
-
-//       &:hover {
-//         opacity: 1;
-//       }
-//     }
-//   }
-
-//   &__bottom {
-//     margin-top: 60px;
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     opacity: 0.9;
-//   }
-
-//   &__socials {
-//     display: flex;
-//     gap: 18px;
-
-//     svg {
-//       width: 22px;
-//       height: 22px;
-//       fill: #fff;
-//       opacity: 0.9;
-//       cursor: pointer;
-
-//       &:hover {
-//         opacity: 1;
-//       }
-//     }
-//   }
-// }
-
-// .btn {
-//   padding: 12px 20px;
-//   border-radius: 14px;
-//   font-weight: 600;
-
-//   &--ghost {
-//     border: 1px solid rgba(255,255,255,.4);
-//   }
-
-//   &--primary {
-//     background: linear-gradient(135deg, #8f2bff, #d92cff);
-//   }
-// }
-// .footer {
-//   position: relative;
-
-//   &__rating {
-//     position: absolute;
-//     right: 24px;
-//     bottom: 32px;
-
-//     img {
-//       height: 70px;
-//       width: auto;
-//       display: block;
-//     }
-//   }
-// }
 .footer {
   background: radial-gradient(1200px 600px at 30% 0%, #2a004d, #110022);
   color: #fff;
@@ -155,7 +11,6 @@
     padding: 0 24px;
   }
 
-  /* TOP CTA SECTION */
   &__top {
     display: flex;
     justify-content: space-between;
@@ -165,7 +20,7 @@
     h2 {
       font-size: 42px;
       font-weight: 700;
-      letter-spacing: -1.5px; /* Tighter heading like reference */
+      letter-spacing: -1.5px;
       max-width: 600px;
     }
   }
@@ -174,16 +29,13 @@
     display: flex;
     gap: 16px;
   }
-
-  /* MAIN GRID: 1 column for Subscribe, 1 column for the Links Grid */
   &__main {
     display: grid;
-    grid-template-columns: 320px 1fr; /* Fixed width for left side */
-    gap: 100px; /* Big gap between subscribe and links */
+    grid-template-columns: 320px 1fr; 
+    gap: 100px; 
     margin-bottom: 80px;
   }
 
-  /* LEFT SIDE: SUBSCRIBE */
   &__subscribe {
     h4 {
       font-size: 16px;
@@ -230,10 +82,9 @@
     }
   }
 
-  /* RIGHT SIDE: 4 COLUMNS */
   &__cols {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* FORCES 4 columns */
+    grid-template-columns: repeat(4, 1fr);
     gap: 40px;
   }
 
@@ -258,8 +109,6 @@
       }
     }
   }
-
-  /* BOTTOM BAR */
   &__bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 40px;
@@ -289,8 +138,6 @@
       }
     }
   }
-
-  /* GLASSDOOR RATING */
   &__rating {
     position: absolute;
     right: 40px;
@@ -303,17 +150,14 @@
     }
   }
 }
-/* ===== FIXED FOOTER BOTTOM LAYOUT ===== */
 
 .footer {
-  // ... keep your existing background and top/main code
 
   &__bottom {
     margin-top: 80px;
     padding-top: 40px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    
-    /* This makes Copyright, Socials, and Rating sit in one row */
+
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
@@ -323,7 +167,6 @@
   &__socials {
     display: flex;
     gap: 24px;
-    /* This centers the icons regardless of the text on the left */
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -339,24 +182,21 @@
       }
     }
   }
-
-  /* Fixed Glassdoor Positioning */
   &__rating {
-    /* Remove the absolute positioning from previous version */
+
     position: static; 
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 
     img {
-      height: 60px; /* Adjusted to match the scale in your photo */
+      height: 60px;
       width: auto;
       display: block;
     }
   }
 }
 
-/* Fix for the Copyright text */
 .footer__bottom p {
   font-size: 17px;
   margin: 0;
@@ -367,7 +207,7 @@
   margin-top: 60px;
   padding: 40px 0;
   display: flex;
-  justify-content: space-between; // Text on left, Everything else on right
+  justify-content: space-between;
   align-items: center;
 
   p {
@@ -376,11 +216,10 @@
   }
 }
 
-/* This container keeps Icons and Rating in a single ROW */
 .footer__right-group {
   display: flex;
   align-items: center;
-  gap: 30px; // Spacing between social icons and the Glassdoor logo
+  gap: 30px; 
 }
 
 .footer__socials {
@@ -390,7 +229,7 @@
   svg {
     width: 27px;
     height: 27px;
-    fill: #ffffff; // Makes your SVG icons white
+    fill: #ffffff; 
     opacity: 0.8;
     transition: opacity 0.2s;
 
@@ -539,16 +378,12 @@
     height: 60px;
   }
 }
-/* =========================
-   TABLET (≤1024px)
-========================= */
 @media (max-width: 1024px) {
 
   .footer {
     padding: 80px 0 50px;
   }
 
-  /* ===== TOP CTA ===== */
   .footer__top {
     flex-direction: column;
     align-items: center;
@@ -566,26 +401,20 @@
     justify-content: center;
   }
 
-  /* ===== MAIN SECTION ===== */
   .footer__main {
-    grid-template-columns: 1fr;  /* stack subscribe + links */
+    grid-template-columns: 1fr; 
     gap: 60px;
   }
 
-  /* Subscribe full width */
   .footer__subscribe {
     max-width: 500px;
     margin: 0 auto;
     text-align: center;
   }
-
-  /* Links in 2 columns */
   .footer__cols {
     grid-template-columns: repeat(2, 1fr);
     gap: 50px 60px;
   }
-
-  /* ===== BOTTOM SECTION ===== */
   .footer__bottom {
     flex-direction: column;
     gap: 30px;

@@ -52,7 +52,7 @@
 }
 
 .nav {
-    max-width: 1480px;   // wider like Make
+    max-width: 1480px;   
   padding: 0 48px;
   margin: 0 auto;
   min-height: 86px;
@@ -119,11 +119,9 @@
   margin-top: 3px;
 }
 
-
-/* DROPDOWN - Fixed Positioning */
 .dropdown {
   position: absolute;
-  top: 100%; /* Sits right at the bottom of the header */
+  top: 100%; 
   left: 50%;
   transform: translateX(-50%) translateY(10px);
   background: #fff;
@@ -137,7 +135,6 @@
   transition: all 0.2s ease;
 }
 
-/* Arrow Tip for Dropdown */
 .dropdown::before {
   content: '';
   position: absolute;
@@ -154,8 +151,6 @@
   visibility: visible;
   transform: translateX(-50%) translateY(0);
 }
-
-/* DROPDOWN ITEM */
 .dropdown__item {
   display: flex;
   gap: 16px;
@@ -185,8 +180,6 @@
     line-height: 1.4;
   }
 }
-
-/* MEGA MENU ADJUSTMENT */
 .dropdown--mega {
   min-width: 600px;
   padding: 24px;
@@ -197,17 +190,12 @@
   gap: 10px;
 }
 
-/* Locate this section in your CSS */
 .mega p {
-  /* Change this hex code to your preferred color */
-  color: #6b5a85; /* This is the current purple-grey color */
+  color: #6b5a85; 
   font-size: 13px;
   line-height: 1.5;
 }
 
-
-/* NAV BAR - The container */
-/* NAV CONTAINER */
 .nav {
   max-width: 1320px;
   margin: 0 auto;
@@ -224,11 +212,10 @@
   align-items: center;
 }
 
-.nav__left { gap: 56px; }     // logo ↔ menu bigger space
-.nav__menu { gap: 32px; }     // menu items spaced better
-.nav__right { gap: 24px; }    // buttons spaced nicely
+.nav__left { gap: 56px; }    
+.nav__menu { gap: 32px; }  
+.nav__right { gap: 24px; }  
 
-/* LINKS */
 .nav__link {
   text-decoration: none;
   font-size: 15px;
@@ -238,12 +225,10 @@
   gap: 6px;
   transition: color 0.2s, opacity 0.2s;
 }
-
-/* BUTTON BASE */
 .btn {
   font-size: 15px;
   font-weight: 700;
-   padding: 10px 18px;  // slightly more horizontal padding
+   padding: 10px 18px;  
   border-radius: 12px;
   text-decoration: none;
   display: inline-flex;
@@ -252,7 +237,6 @@
   transition: all 0.2s ease;
 }
 
-/* BUTTON VARIANTS */
 .btn--login {
   background: transparent;
 }
@@ -268,19 +252,16 @@
   }
 }
 
-/* LOGO */
 .logo img {
   height: 28px;
   display: block;
   transition: filter 0.2s ease;
 }
 
-
-/* SOLUTIONS SPACING FIX */
 .mega {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px 40px; /* Increased vertical and horizontal space */
+  gap: 24px 40px;
   padding: 10px;
 }
 
@@ -289,20 +270,16 @@
 }
 
 @media (max-width: 768px) {
-  /* hide desktop actions */
   .nav__menu,
   .nav__right .btn,
   .nav__right .nav__link {
     display: none;
   }
 
-  /* nav spacing */
   .nav {
     padding: 0 16px;
     min-height: 64px;
   }
-
-  /* logo stays left */
   .logo img {
     height: 24px;
     filter: brightness(0) invert(1);
@@ -341,11 +318,11 @@
 @media (max-width: 768px) {
 
   .nav {
-    min-height: 72px;   // optional – gives more breathing space
+    min-height: 72px;   
   }
 
   .nav__mobile-icon {
-    width: 52px;        // 🔥 bigger circle
+    width: 52px;       
     height: 52px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.12);
@@ -366,10 +343,8 @@ svg {
   height: 26px;
 }
 }
-/* TABLET ONLY */
 @media (min-width: 769px) and (max-width: 1024px) {
 
-  /* Use mobile-style layout */
   .nav {
     display: flex;
     align-items: center;
@@ -378,34 +353,28 @@ svg {
     min-height: 72px;
   }
 
-  /* Hide desktop menu */
   .nav__menu {
     display: none;
   }
 
-  /* Left side (logo only) */
   .nav__left {
     display: flex;
     align-items: center;
     gap: 16px;
   }
 
-  /* Right side */
   .nav__right {
     display: flex;
     align-items: center;
     gap: 14px;
   }
 
-  /* Show both buttons */
   .btn--login,
   .btn--get-started {
     display: inline-flex;
     font-size: 14px;
     padding: 8px 14px;
   }
-
-  /* Show round icon */
   .nav__mobile-icon {
     display: flex;
     width: 42px;

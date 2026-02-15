@@ -1,6 +1,6 @@
 .ratings__container {
-  max-width: 1200px;   // 👈 important
-  margin: 0 auto;      // 👈 centers the whole block
+  max-width: 1200px;  
+  margin: 0 auto;      
   padding: 0 24px;
   text-align: center;
 }
@@ -31,7 +31,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 96px; // 👈 spacing between brands (key difference)
+    gap: 96px; 
   }
 }
 
@@ -46,7 +46,7 @@
     margin-bottom: 16px;
 
     img {
-      height: 32px;     // 👈 forces identical logo size
+      height: 32px;   
       width: auto;
       display: block;
     }
@@ -65,7 +65,7 @@
       font-size: 18px;
       line-height: 1;
       position: relative;
-      top: -1px; // 👈 vertical optical alignment
+      top: -1px;
     }
 
     .reviews {
@@ -93,8 +93,8 @@
 
   .ratings__grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;  // 👈 2 per row
-    gap: 32px 24px;                  // vertical + horizontal gap
+    grid-template-columns: 1fr 1fr; 
+    gap: 32px 24px;                  
     justify-items: center;
   }
 

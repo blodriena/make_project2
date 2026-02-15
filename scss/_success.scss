@@ -52,7 +52,7 @@
 .story {
   display: flex;
   flex-direction: column;
-  border-radius: 28px; /* more rounded like photo */
+  border-radius: 28px; 
   overflow: hidden;
   background: linear-gradient(
     180deg,
@@ -80,7 +80,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  /* The glow background */
+
   background: radial-gradient(circle at center, #3d007a 0%, #1a0030 100%);
 
   img {
@@ -91,7 +91,6 @@
     z-index: 2;
   }
 
-  /* The Purple AI Tag */
   .ai-badge {
     position: absolute;
     bottom: 15px;
@@ -108,7 +107,7 @@
 }
 
 .story__content {
-  padding: 32px 24px; /* More padding for a premium look */
+  padding: 32px 24px; 
   text-align: left;
 
   .story__meta {
@@ -134,14 +133,12 @@
     margin: 0;
   }
 }
-
-/* THE BUTTON: Rectangular with rounded corners */
 .success__cta {
   display: inline-block;
   background: linear-gradient(90deg, #834dff 0%, #ff2bd6 100%);
   color: #ffffff;
   padding: 15px 30px;
-  border-radius: 12px; /* Fixed radius as per photo */
+  border-radius: 12px; 
   font-weight: 700;
   text-decoration: none;
   font-size: 15px;
@@ -155,7 +152,6 @@
   }
 }
 
-/* ===== RESPONSIVE ===== */
 
 @media (max-width: 1024px) {
   .success__grid {
@@ -167,11 +163,10 @@
     height: 160px;
   }
 }
-/* TABLET ONLY */
 @media (min-width: 769px) and (max-width: 1024px) {
 
   .success-card {
-    background: #2a0a4a;   /* dark outer wrapper */
+    background: #2a0a4a;   
     padding: 16px;
     border-radius: 24px;
     border: 1px solid rgba(255,255,255,0.08);
@@ -188,7 +183,7 @@
   }
 
   .success-card + .success-card {
-    margin-top: 32px; /* spacing between cards */
+    margin-top: 32px; 
   }
 
 }
